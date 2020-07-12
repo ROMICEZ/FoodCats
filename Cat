@@ -1,0 +1,30 @@
+package CatsFood;
+
+public class Cat {
+    private String name;
+    private boolean isFed;
+
+    public Cat(String name) {
+        this.name = name;
+        isFed = false;
+    }
+
+    public void eat(Plate plate, int mealSize) {
+        boolean isDone = plate.reduce(mealSize);
+        if (isDone) {
+            System.out.println("Кот наелся");
+            isFed = true;
+        } else {
+            System.out.println("Кот не поел");
+            isFed = false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Кот{" +
+                "Кличка='" + name + '\'' +
+                ", Покушал=" + isFed +
+                '}';
+    }
+}
