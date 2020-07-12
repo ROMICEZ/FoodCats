@@ -1,0 +1,22 @@
+package CatsFood;
+
+public class Main {
+    public static void main(String[] args) {
+        Cat Барсик = new Cat("Барсик");
+        Cat Муня = new Cat("Муня");
+        Cat Цезарь = new Cat("Цезарь");
+
+        Cat[] cats = {Барсик, Муня, Цезарь};
+
+        Plate plate = new Plate(100, 100);
+
+        for (int i = 0; i < cats.length; i++) {
+            cats[i].eat(plate, 40);
+            System.out.println(cats[i]);
+        }
+
+        plate.addFood(60);
+        cats[2].eat(plate, 40);
+        System.out.println(cats[2]);
+    }
+}
